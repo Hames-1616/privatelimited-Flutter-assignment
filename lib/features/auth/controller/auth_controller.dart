@@ -15,12 +15,16 @@ class authcontroller extends StateNotifier<bool> {
         super(false);
 
   void getotp(String name, BuildContext context) {
+    state = true;
     authrepo.otpgenerate(name);
+    state = false;
     ShowSnackBar(context, "Sending OTP");
   }
 
   Future<bool> verifyotp(String smsCode) async {
+    state = true;
     final s = await authrepo.verifyCode(smsCode);
+    state = false;
     return s;
   }
 }

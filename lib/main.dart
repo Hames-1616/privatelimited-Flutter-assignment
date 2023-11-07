@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:privatelimited/features/auth/views/startPage.dart';
+import 'package:privatelimited/features/home/views/mainpage.dart';
 import 'package:privatelimited/firebase_options.dart';
 
 void main() async {
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Homepage()
+      home:
+      Homepage()
       );}
 }
 

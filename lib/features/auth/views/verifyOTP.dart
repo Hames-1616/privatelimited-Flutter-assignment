@@ -7,6 +7,7 @@ import 'package:privatelimited/core/loadingScreen.dart';
 import 'package:privatelimited/core/showsnack.dart';
 import 'package:privatelimited/core/textfield.dart';
 import 'package:privatelimited/features/auth/controller/auth_controller.dart';
+import 'package:privatelimited/features/home/views/maineNav.dart';
 import 'package:privatelimited/features/home/views/mainpage.dart';
 
 class OtpVerify extends ConsumerWidget {
@@ -60,7 +61,7 @@ class OtpVerify extends ConsumerWidget {
                       Navigator.pushAndRemoveUntil(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const Mainpage()),
+                              builder: (context) =>  mainScreen()),
                           (route) => false);
                     } else {
                       // ignore: use_build_context_synchronously
